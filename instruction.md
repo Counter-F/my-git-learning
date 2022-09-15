@@ -21,6 +21,9 @@ main
 提交时候是向上提交（提交汇入到父节点）
 
 
+
+## 修改并管理历史记录
+
 修改并提交的流程
 
 文件 -> [git add] -> 暂存区 -> [git commit] -> 仓库
@@ -45,4 +48,31 @@ git commit 之后，想要撤回             | vscode中COMMITS，选择要删�
 2. git checkout -A
 
 提交半年了，还想找某一个               | 从 FILE HISTORY中找到某一次的历史记录记录，复制粘贴到最近的文件夹（即覆盖掉现有记录），然后重新修改
+
+
+## 分支（协同开发） Branch
+
+从当前节点新建分支
+git checkout -b <branchname>
+
+列举所有分支
+git branch
+
+单纯的切换到某个分支
+git checkout <branchname>
+
+删掉特定分支
+git branch -D <branchname>
+
+合并分支（分支注入到父节点）
+git merge <branchname>
+
+## 涉及到问题及冲突
+1. 主分支
+2. 不同分支之间是隔离的
+    - 子分支创建时复制父分支的所有内容（深拷贝）
+    - 父分支修改之后子分支内容不会改变
+    - 子分支汇入修改后的父分支，可能导致部分地方产生冲突
+3. 不同子分支之间涉及的内容
+
 
