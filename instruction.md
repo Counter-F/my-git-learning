@@ -47,7 +47,7 @@ git commit 之后，想要撤回             | vscode中COMMITS，选择要删�
 1. git reset Head^1 重定位到head的上1个（head就是当前，因此要定位到head的上x个位置），并放回暂存区
 2. git checkout -A
 
-提交半年了，还想找某一个               | 从 FILE HISTORY中找到某一次的历史记录记录，复制粘贴到最近的文件夹（即覆盖掉现有记录），然后重新修改
+提交半年了，还想找某一个找某一个内容               | 从 FILE HISTORY中找到某一次的历史记录记录，复制粘贴到最近的文件夹（即覆盖掉现有记录），然后重新修改
 
 
 ## 分支（协同开发） Branch
