@@ -29,3 +29,14 @@ main
     - -A 表示全部修改过的文件都
 
 2. git commit -m '本次修改的注解信息'
+
+查看commit日志
+git log --stat
+
+
+git add <file> 之后，想要撤回
+
+1. git checkout <file>
+
+
+git commit 之后
