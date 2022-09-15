@@ -67,6 +67,9 @@ git branch -D <branchname>
 合并分支（分支注入到父节点，需要从父节点分支（master分支）中执行此命令，branchname为子节点的分支名）
 git merge <branchname>
 
+修改当前分支名字
+git branch -M <new_branchname>
+
 ## 涉及到问题冲突以及管理
 1. 主分支是一切的起点和终点，建议branch都是以主分支作为父节点，新建一个branch
 2. 不同分支之间是隔离的
@@ -77,3 +80,23 @@ git merge <branchname>
 4. git merge --abort 当出现冲突时（其他子节点和该子节点修改了同一行内容），如果不知道应该使用哪个版本，那就用此命令放弃此次合并操作
 5. merge一个子分支之后，该子分支就没有用了，就可以删掉了。 
 6. 每次新的协同任务出现后，都是根据最新的master分支或者某个子分支重新进行创建子分支来分配工作的。
+
+
+## 推送和拉取
+
+1. 需先在GitHub上建立一个仓库，并将本地仓库和远程的仓库用命令建立一个连接
+
+    git remote add origin https://github.com/Counter-F/my-git-learning.git  # 和远程的repository建立连接
+    git branch -M main  [当前分支名字修改位main，美国人权运动，master有主人的意思，因此GitHub不许用master了]
+    git push -u origin main  第一次推送使用的命令
+
+2. 建立好连接之后，以后的操作不需要重复建立连接了，直接执行
+
+    git push 推送当前最新的分支，提交到远程服务器上
+
+    git pull 拉取远程最新的分支，更新本地仓库
+
+    这两个命令都不需要任何其他参数了！！！
+
+
+推送
